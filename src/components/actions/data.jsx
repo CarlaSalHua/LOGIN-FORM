@@ -1,4 +1,3 @@
-import React from "react";
 //const URL_LOGIN = 'http://localhost/loginphp/login.php'
 
 const sendData= async (url, data)=> {
@@ -22,7 +21,7 @@ const newUser= async (url, data)=> {
         body: JSON.stringify(data), 
         headers: {
             'Content-Type': 'application/json'
-        }
+        } 
     });
     //console.log('res',res);
     const json= await res.json();
@@ -30,7 +29,7 @@ const newUser= async (url, data)=> {
     return json;
 };
 
-export default {
+export {
     sendData, 
     newUser
 };

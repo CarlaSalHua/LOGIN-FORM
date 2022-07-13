@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import Login from './components/Login/Login';
 import Home from './components/Home/Home';
+import Create from './components/CreateAccount/Create';
 
 function App() {
   const [connected, setConnected]= useState(false);
@@ -12,8 +13,9 @@ function App() {
 
 
   return (
-    connected?
-      <Home/>: <Login access={access}/>
+    // connected?
+    //   <Home/>: <Login access={access}/>
+    <Create/>
   );
 }
 

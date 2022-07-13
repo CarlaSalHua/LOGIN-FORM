@@ -1,5 +1,5 @@
 import React, {useRef, useState} from 'react';
-import sendData from '../actions/data.jsx';
+import {sendData} from '../actions/data.jsx';
 import './Login.scss';
 const URL_LOGIN = 'http://localhost/loginphp/login.php';
 
@@ -46,8 +46,8 @@ const Login= (props)=> {
                 <input
                   type='email'
                   className='form-control'
-                  placeholder='correo'
-                  aria-label='Username'
+                  placeholder='user@gmail.com'
+                  aria-label='username'
                   aria-describedby='basic-addon1'
                   ref={refUser}
                 />
@@ -77,18 +77,18 @@ const Login= (props)=> {
                   </div>
               }
 
-            <button 
-            onClick={handleLogin}
-            disabled={wait}
-            className='btn btn-dark btn-lg btn-block'>
-              Acceder
-            </button>
+              <button 
+              onClick={handleLogin}
+              disabled={wait}
+              className='btn btn-dark btn-lg btn-block'>
+                Acceder
+              </button>
 
-            <div className='card-footer'>
-              <span>Olvido su clave?</span>
-              <br/>
-              <a href='http://'>recuperar cuenta</a>
-            </div>
+              <div className='card-footer'>
+                <span>Olvido su clave?</span>
+                <br/>
+                <a href='http://'>recuperar cuenta</a>
+              </div>
             
             </div>
 

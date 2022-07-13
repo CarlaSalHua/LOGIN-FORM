@@ -1,0 +1,14 @@
+.create {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    background: rgb(69,58,5);
+    background: linear-gradient(90deg, rgb(144, 95, 5) 0%, rgb(154, 101, 10) 14%, rgba(255,158,0,1) 76%);
+}
+
+.card-header {
+    align-content:space-between;
+    text-align: center;
+}
