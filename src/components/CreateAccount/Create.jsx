@@ -11,6 +11,8 @@ const Create= (props)=> {
     const refNombre= useRef(null);
     const refApellidos= useRef(null);
 
+    const [error, setError]= useState(null);
+
     const handleCreate= async ()=> {
         const data = {
             "nombre": refNombre.current.value,
@@ -18,9 +20,10 @@ const Create= (props)=> {
             "usuario":refUser.current.value,
             "clave": refClave.current.value,
         };
-        console.log('datitos', data )
+        //console.log('datitos', data )
         const resJson= await newUser (URL_CREATE, data);
-        //console.log('evento de', resJson)
+        console.log('evento de', resJson)
+        setError(resJson.error)
     }
 
   return (
@@ -107,6 +110,13 @@ const Create= (props)=> {
                             required
                             />
                         </div>
+
+                        {
+                            error &&
+                            <div className='alert alert-danger'>
+                                {error}
+                            </div>
+                        }
                         
                         <button
                             onClick={handleCreate}
